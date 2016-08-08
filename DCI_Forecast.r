@@ -13,8 +13,8 @@ Forecaster <- function(CorpsData, OpenClass=F) {
 	#First, compile all the data to forecast with
 	VanillaDays = which(!is.na(CorpsData))
 	VanillaScores = CorpsData[VanillaDays]
-	MomentumDays = VanillaDays[which(VanillaDays > 30)]
-	MomentumScores = VanillaScores[which(VanillaDays > 30)]
+	MomentumDays = VanillaDays[which(VanillaDays > 37)]
+	MomentumScores = VanillaScores[which(VanillaDays > 37)]
 	
 	#Run the vanilla model and get scores and ranges for days 50-52
 	VanillaModel = lm(VanillaScores ~ VanillaDays) #make the model
